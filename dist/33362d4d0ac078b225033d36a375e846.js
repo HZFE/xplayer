@@ -7272,6 +7272,31 @@ Vue$3.nextTick(function () {
 /*  */
 
 exports.default = Vue$3;
+},{}],11:[function(require,module,exports) {
+var inserted = exports.cache = {}
+
+function noop () {}
+
+exports.insert = function (css) {
+  if (inserted[css]) return noop
+  inserted[css] = true
+
+  var elem = document.createElement('style')
+  elem.setAttribute('type', 'text/css')
+
+  if ('textContent' in elem) {
+    elem.textContent = css
+  } else {
+    elem.styleSheet.cssText = css
+  }
+
+  document.getElementsByTagName('head')[0].appendChild(elem)
+  return function () {
+    document.getElementsByTagName('head')[0].removeChild(elem)
+    inserted[css] = false
+  }
+}
+
 },{}],5:[function(require,module,exports) {
 var Vue // late bind
 var version
@@ -7502,11 +7527,11 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],8:[function(require,module,exports) {
+},{}],9:[function(require,module,exports) {
 "use strict";
 
-;(function () {
-  "use strict";
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 38, stdin */\n.xvideo video[data-v-12ecd0a6] {\n  max-width: 100%; }");(function () {
+  'use strict';
 
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -7514,6 +7539,19 @@ exports.reload = tryWrap(function (id, options) {
   exports.default = {
     data: function data() {
       return {};
+    },
+    props: {
+      src: {
+        type: String,
+        require: true
+      },
+      poster: {
+        type: String
+      },
+      preload: {
+        type: String,
+        default: 'none'
+      }
     }
   };
 })();
@@ -7523,9 +7561,67 @@ if (__vue__options__.functional) {
   console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.");
 }
 __vue__options__.render = function render() {
-  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "xplayer" }, [_vm._v("\n  xplayer\n")]);
+  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "xvideo" }, [_c('video', { attrs: { "poster": _vm.poster, "webkit-playsinline": "", "playsinline": "", "crossorigin": "anonymous", "preload": "preload", "src": _vm.src } })]);
 };
 __vue__options__.staticRenderFns = [];
+__vue__options__._scopeId = "data-v-12ecd0a6";
+if (module.hot) {
+  (function () {
+    var hotAPI = require("vue-hot-reload-api");
+    hotAPI.install(require("vue"), true);
+    if (!hotAPI.compatible) return;
+    module.hot.accept();
+    module.hot.dispose(__vueify_style_dispose__);
+    if (!module.hot.data) {
+      hotAPI.createRecord("data-v-12ecd0a6", __vue__options__);
+    } else {
+      hotAPI.reload("data-v-12ecd0a6", __vue__options__);
+    }
+  })();
+}
+},{"vueify/lib/insert-css":11,"vue-hot-reload-api":5,"vue":4}],8:[function(require,module,exports) {
+"use strict";
+
+;(function () {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _xvideo = require('./xvideo');
+
+  var _xvideo2 = _interopRequireDefault(_xvideo);
+
+  function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
+  }
+
+  exports.default = {
+    data: function data() {
+      return {};
+    },
+    props: {
+      src: {
+        type: String,
+        require: true
+      }
+    },
+    components: {
+      xvideo: _xvideo2.default
+    }
+  };
+})();
+if (module.exports.__esModule) module.exports = module.exports.default;
+var __vue__options__ = typeof module.exports === "function" ? module.exports.options : module.exports;
+if (__vue__options__.functional) {
+  console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.");
+}
+__vue__options__.render = function render() {
+  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "xplayer" }, [_c('xvideo', { attrs: { "src": _vm.src } })], 1);
+};
+__vue__options__.staticRenderFns = [];
+__vue__options__._scopeId = "data-v-2aa81846";
 if (module.hot) {
   (function () {
     var hotAPI = require("vue-hot-reload-api");
@@ -7535,11 +7631,11 @@ if (module.hot) {
     if (!module.hot.data) {
       hotAPI.createRecord("data-v-2aa81846", __vue__options__);
     } else {
-      hotAPI.reload("data-v-2aa81846", __vue__options__);
+      hotAPI.rerender("data-v-2aa81846", __vue__options__);
     }
   })();
 }
-},{"vue-hot-reload-api":5,"vue":4}],7:[function(require,module,exports) {
+},{"./xvideo":9,"vue-hot-reload-api":5,"vue":4}],7:[function(require,module,exports) {
 "use strict";
 
 var xplayer = require('./xplayer');
@@ -7548,7 +7644,7 @@ module.exports = xplayer;
 },{"./xplayer":8}],3:[function(require,module,exports) {
 "use strict";
 
-;(function () {
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 29, stdin */\n* {\n  margin: 0;\n  padding: 0; }\n\n/* line 34, stdin */\n.player {\n  display: flex;\n  justify-content: center;\n  max-width: 100%; }");(function () {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -7566,7 +7662,11 @@ module.exports = xplayer;
   exports.default = {
     name: 'app',
     data: function data() {
-      return {};
+      return {
+        options: {
+          src: 'http://ofyaji162.bkt.clouddn.com/%E6%88%91%E5%AE%B3%E6%80%95.mp4'
+        }
+      };
     },
 
     components: {
@@ -7580,7 +7680,7 @@ if (__vue__options__.functional) {
   console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.");
 }
 __vue__options__.render = function render() {
-  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { attrs: { "id": "app" } }, [_c('xplayer')], 1);
+  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { attrs: { "id": "app" } }, [_c('div', { staticClass: "player" }, [_c('xplayer', { attrs: { "src": _vm.options.src } })], 1)]);
 };
 __vue__options__.staticRenderFns = [];
 if (module.hot) {
@@ -7589,14 +7689,15 @@ if (module.hot) {
     hotAPI.install(require("vue"), true);
     if (!hotAPI.compatible) return;
     module.hot.accept();
+    module.hot.dispose(__vueify_style_dispose__);
     if (!module.hot.data) {
       hotAPI.createRecord("data-v-507a16f1", __vue__options__);
     } else {
-      hotAPI.reload("data-v-507a16f1", __vue__options__);
+      hotAPI.rerender("data-v-507a16f1", __vue__options__);
     }
   })();
 }
-},{"./xplayer":7,"vue-hot-reload-api":5,"vue":4}],2:[function(require,module,exports) {
+},{"vueify/lib/insert-css":11,"./xplayer":7,"vue-hot-reload-api":5,"vue":4}],2:[function(require,module,exports) {
 "use strict";
 
 var _vue = require("vue");
