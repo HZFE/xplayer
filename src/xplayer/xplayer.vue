@@ -1,5 +1,5 @@
 <template>
- <div class="xplayer">
+ <div class="x-player">
    <xvideo
      :src="src"
    ></xvideo>
@@ -26,7 +26,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .xplayer {
-    
+  @import "//at.alicdn.com/t/font_224096_t3es4e3cae89f6r.css";
+  .x-player {
+
   }
 </style>

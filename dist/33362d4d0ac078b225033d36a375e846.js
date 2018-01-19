@@ -7272,7 +7272,7 @@ Vue$3.nextTick(function () {
 /*  */
 
 exports.default = Vue$3;
-},{}],11:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -7297,7 +7297,7 @@ exports.insert = function (css) {
   }
 }
 
-},{}],5:[function(require,module,exports) {
+},{}],7:[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -7527,10 +7527,10 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],9:[function(require,module,exports) {
+},{}],6:[function(require,module,exports) {
 "use strict";
 
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 38, stdin */\n.xvideo video[data-v-12ecd0a6] {\n  max-width: 100%; }");(function () {
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 384, stdin */\n.x-video {\n  position: relative;\n  width: 100%;\n  overflow: hidden; }\n  /* line 388, stdin */\n  .x-video .x-title {\n    width: 100%;\n    line-height: 40px;\n    text-align: center;\n    background-color: #353535;\n    color: #e5e9ef;\n    vertical-align: middle;\n    transition: transform 0.5s ease-out; }\n  /* line 397, stdin */\n  .x-video .t-video {\n    position: relative;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    background-color: black; }\n    /* line 404, stdin */\n    .x-video .t-video video {\n      max-height: 100%; }\n    /* line 407, stdin */\n    .x-video .t-video .max-pause {\n      position: absolute;\n      bottom: 50px;\n      right: 50px;\n      font-size: 45px;\n      height: 60px;\n      width: 60px;\n      color: #99a2aa;\n      border: 1px solid #99a2aa;\n      border-radius: 100%; }\n      /* line 417, stdin */\n      .x-video .t-video .max-pause:before {\n        position: absolute;\n        padding-top: 7px;\n        padding-left: 12px; }\n  /* line 424, stdin */\n  .x-video .danmu {\n    position: absolute;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    z-index: 2; }\n  /* line 431, stdin */\n  .x-video .x-loading {\n    position: absolute;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 0, 0, 0.95);\n    z-index: 10; }\n    /* line 438, stdin */\n    .x-video .x-loading p {\n      position: absolute;\n      width: 100%;\n      text-align: center;\n      color: #99a2aa;\n      top: 50%; }\n    /* line 445, stdin */\n    .x-video .x-loading i {\n      position: absolute;\n      font-size: 60px;\n      width: 100px;\n      height: 100px;\n      top: 50%;\n      left: 50%;\n      margin-left: -50px;\n      margin-top: -100px;\n      color: #99a2aa;\n      animation: turn 1s linear infinite; }\n      /* line 456, stdin */\n      .x-video .x-loading i:before {\n        position: absolute;\n        top: 18px;\n        padding-left: 20.5px; }\n  /* line 463, stdin */\n  .x-video .c-video {\n    height: 40px;\n    border: 1px solid #e5e9ef;\n    user-select: none;\n    color: #6d757a;\n    background-color: white;\n    transition: transform 0.5s ease-out; }\n    /* line 470, stdin */\n    .x-video .c-video .play {\n      float: left;\n      height: 100%;\n      color: #99a2aa; }\n      /* line 474, stdin */\n      .x-video .c-video .play i {\n        font-size: 28px;\n        line-height: 40px;\n        padding: 5px;\n        cursor: pointer; }\n      /* line 480, stdin */\n      .x-video .c-video .play:before {\n        left: -10px !important; }\n      /* line 483, stdin */\n      .x-video .c-video .play:hover {\n        background-color: #e5e9ef; }\n        /* line 485, stdin */\n        .x-video .c-video .play:hover i {\n          color: #6d757a; }\n    /* line 490, stdin */\n    .x-video .c-video .line {\n      position: relative;\n      float: left;\n      height: 100%;\n      width: calc(100% - 350px);\n      cursor: pointer;\n      user-select: none; }\n      /* line 497, stdin */\n      .x-video .c-video .line .go-time {\n        position: absolute;\n        top: -26px;\n        background-color: #a3a3a3;\n        padding: 2px 4px;\n        border-radius: 5px;\n        font-size: 14px;\n        z-index: 5;\n        margin-left: -15px;\n        color: white; }\n      /* line 508, stdin */\n      .x-video .c-video .line .line-to {\n        position: absolute;\n        width: 0;\n        height: 6px;\n        top: 18px;\n        border-radius: 10px;\n        background-color: #e7e7e7;\n        transition: all 0.05s linear; }\n      /* line 517, stdin */\n      .x-video .c-video .line .line-bg {\n        width: 100%;\n        z-index: 1; }\n      /* line 521, stdin */\n      .x-video .c-video .line .line-load {\n        z-index: 2;\n        background-color: #8adceb; }\n      /* line 525, stdin */\n      .x-video .c-video .line .line-now {\n        z-index: 3;\n        background-color: #00aed6; }\n      /* line 529, stdin */\n      .x-video .c-video .line .line-point {\n        position: absolute;\n        top: 14px;\n        margin-left: -10px;\n        width: 12px;\n        height: 12px;\n        background-color: white;\n        border-radius: 10px;\n        border: 1px solid #8adceb;\n        z-index: 4;\n        transition: all 0.05s linear;\n        cursor: pointer; }\n    /* line 543, stdin */\n    .x-video .c-video .show-time {\n      float: left;\n      width: 100px;\n      font-size: 14px;\n      padding-left: 8px;\n      line-height: 40px;\n      text-align: center; }\n    /* line 551, stdin */\n    .x-video .c-video .right-c {\n      float: right;\n      width: 200px; }\n      /* line 554, stdin */\n      .x-video .c-video .right-c .c-item {\n        width: 20%; }\n    /* line 558, stdin */\n    .x-video .c-video .c-item {\n      position: relative;\n      float: left;\n      width: 40px;\n      padding: 0;\n      text-align: center;\n      font-size: 13px;\n      line-height: 40px;\n      cursor: pointer; }\n      /* line 567, stdin */\n      .x-video .c-video .c-item i {\n        font-size: 20px; }\n      /* line 570, stdin */\n      .x-video .c-video .c-item:before {\n        display: none;\n        position: absolute;\n        top: -33px;\n        left: -20px;\n        width: 60px;\n        padding: 0 6px;\n        line-height: 30px;\n        text-align: center;\n        color: #d9d9d9;\n        border-radius: 5px;\n        background-color: rgba(0, 0, 0, 0.8);\n        content: attr(data-msg);\n        animation: fadeIn 0.2s ease-out 1; }\n      /* line 585, stdin */\n      .x-video .c-video .c-item:hover {\n        background-color: #e5e9ef; }\n        /* line 587, stdin */\n        .x-video .c-video .c-item:hover:before {\n          display: block; }\n    /* line 593, stdin */\n    .x-video .c-video .v-volume i:before {\n      margin-top: 3px;\n      margin-left: 3px; }\n    /* line 599, stdin */\n    .x-video .c-video .c-dan i {\n      font-size: 22px; }\n    /* line 604, stdin */\n    .x-video .c-video .f-screen:before {\n      left: -30px; }\n\n/* line 610, stdin */\n.mid-video {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  background-color: white;\n  z-index: 9999; }\n  /* line 618, stdin */\n  .mid-video .x-title {\n    position: absolute;\n    top: 0;\n    z-index: 10000;\n    background-color: rgba(0, 0, 0, 0.6); }\n    /* line 623, stdin */\n    .mid-video .x-title p {\n      padding-left: 50px;\n      text-align: left; }\n  /* line 628, stdin */\n  .mid-video .t-video {\n    height: 100%; }\n    /* line 630, stdin */\n    .mid-video .t-video video {\n      display: block;\n      max-height: 100%;\n      margin: auto; }\n    /* line 635, stdin */\n    .mid-video .t-video .max-pause {\n      bottom: 100px; }\n  /* line 639, stdin */\n  .mid-video .c-video {\n    position: absolute;\n    width: 100%;\n    bottom: 0px;\n    z-index: 10000; }\n\n/* line 656, stdin */\n.fade-in {\n  animation: scaleIn 0.3s ease-out 1; }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes scaleIn {\n  0% {\n    opacity: 0;\n    transform: scale3d(2, 2, 2); }\n  100% {\n    opacity: 1;\n    transform: scale3d(1, 1, 1); } }\n\n@keyframes turn {\n  0% {\n    transform: rotate3d(0, 0, 0, 180deg); }\n  100% {\n    transform: rotate3d(0, 0, 4, 180deg); } }\n\n@media screen and (max-width: 700px) {\n  /* line 698, stdin */\n  .x-video .x-loading i, .x-video .x-loading p {\n    top: 70%; } }");(function () {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -7538,20 +7538,297 @@ var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 
   });
   exports.default = {
     data: function data() {
-      return {};
+      return {
+        play: false,
+        nowTime: 0,
+        allTime: 0,
+        buffer: true,
+        name: '我害怕',
+        definition: '超清',
+
+        barrage: false,
+
+        midScreen: false,
+
+        maxScreen: false,
+
+        cache: true,
+
+        menuTime: 2,
+        setMenu: '',
+
+        volume: 50,
+
+        watting: true,
+        img: '',
+        loadLength: 0,
+        set: '',
+        showTime: false,
+        goNowTime: 0,
+        screenX: 0,
+        oldX: 0,
+        setting: ''
+      };
     },
+
     props: {
       src: {
         type: String,
         require: true
-      },
-      poster: {
-        type: String
-      },
-      preload: {
-        type: String,
-        default: 'none'
       }
+    },
+    computed: {
+      reslutTime: function reslutTime() {
+        return this.two(this.nowTime) + ' / ' + this.two(this.allTime);
+      },
+      volumeIcon: function volumeIcon() {
+        if (this.volume === 100) {
+          return 'icon-v-v3';
+        } else if (this.volume >= 50) {
+          return 'icon-v-v2';
+        } else if (this.volume > 0) {
+          return 'icon-v-v1';
+        } else {
+          return 'icon-v-v0';
+        }
+      },
+      playMsg: function playMsg() {
+        return this.play ? '暂停' : '播放';
+      },
+      danMsg: function danMsg() {
+        return this.barrage ? '关闭弹幕' : '打开弹幕';
+      },
+      midScreenMsg: function midScreenMsg() {
+        return this.midScreen ? '小屏模式' : '宽屏模式';
+      },
+      maxScreenMsg: function maxScreenMsg() {
+        return this.maxScreen ? '退出全屏' : '全屏';
+      }
+    },
+    watch: {
+      play: function play() {
+        this.play ? (this.$refs.video.play(), this.start()) : (this.$refs.video.pause(), this.pause());
+      },
+      maxScreen: function maxScreen() {
+        if (!this.maxScreen) {
+          clearInterval(this.setMenu);
+          this.$refs.xTitle.style.transform = 'translate3d(0, 0, 0)';
+          this.$refs.xControl.style.transform = 'translate3d(0, 0, 0)';
+        }
+      },
+      midScreen: function midScreen() {
+        if (!this.midScreen) {
+          clearInterval(this.setMenu);
+          this.$refs.xTitle.style.transform = 'translate3d(0, 0, 0)';
+          this.$refs.xControl.style.transform = 'translate3d(0, 0, 0)';
+        }
+      }
+    },
+    methods: {
+      two: function two(data) {
+        var m = ~~(data / 60);
+        var s = ~~(data % 60);
+        m = m > 9 ? m : '0' + m;
+        s = s > 9 ? s : '0' + s;
+        return m + ':' + s;
+      },
+      playVideo: function playVideo() {
+        if (!this.play && !this.watting) {
+          this.play = true;
+        } else {
+          this.play = false;
+        }
+        if (this.loadLength < 1) {
+          this.buffered();
+        }
+      },
+      start: function start() {
+        var _this = this;
+
+        this.set = setInterval(function () {
+          _this.nowTime = _this.$refs.video.currentTime;
+          _this.allTime = _this.$refs.video.duration;
+        }, 100);
+      },
+      pause: function pause() {
+        clearInterval(this.set);
+      },
+      loadedmetadata: function loadedmetadata() {
+        if (this.$refs.video) {
+          this.nowTime = this.$refs.video.currentTime;
+          this.allTime = this.$refs.video.duration;
+        }
+      },
+      canplay: function canplay() {
+        this.watting = false;
+      },
+      seeked: function seeked() {
+        if (this.play === false) {
+          this.play = true;
+        }
+        this.watting = false;
+      },
+      goTime: function goTime(event) {
+        this.showTime = true;
+        var go = 0;
+        var all = window.getComputedStyle(this.$refs.bar).width;
+        all = all.replace('px', '');
+        if (event.target.nodeName !== 'I') {
+          go = event.offsetX;
+        } else {
+          go = event.offsetX + this.nowTime / this.allTime * all;
+        }
+        var time = (go / all * this.allTime).toFixed(3);
+        this.goNowTime = time;
+      },
+      toMax: function toMax() {
+        var elem = this.$refs.xVideo;
+        if (!this.maxScreen) {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+          } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+        }
+        this.maxScreen = !this.maxScreen;
+      },
+      cancel: function cancel(e) {
+        this.maxScreen = false;
+      },
+      toogleMenu: function toogleMenu(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.screenX = this.screenX === 0 ? e.screenX : this.screenX;
+        if (Math.round(this.screenX - e.screenX) === 1) {
+          this.screenX = e.screenX;
+
+          var title = this.$refs.xTitle;
+          var control = this.$refs.xControl;
+          if (this.maxScreen || this.midScreen) {
+            title.style.transform = 'translate3d(0, 0, 0)';
+            control.style.transform = 'translate3d(0, 0, 0)';
+            clearInterval(this.setMenu);
+            if (this.play) {
+              this.setMenu = setTimeout(function () {
+                title.style.transform = 'translate3d(0, -100%, 0)';
+                control.style.transform = 'translate3d(0, 100%, 0)';
+              }, this.menuTime * 1000);
+            }
+          }
+        } else {
+          this.screenX = e.screenX;
+          return false;
+        }
+      },
+      leaveTime: function leaveTime() {
+        this.showTime = false;
+      },
+      jump: function jump() {
+        this.$refs.video.currentTime = this.goNowTime;
+        this.nowTime = this.$refs.video.currentTime;
+      },
+      drap: function drap(e) {
+        this.pause();
+        e.preventDefault();
+        window.addEventListener('mousemove', this.move);
+        window.addEventListener('touchmove', this.move);
+        window.addEventListener('mouseup', this.leave);
+        window.addEventListener('touchend', this.leave);
+      },
+      move: function move(e) {},
+      leave: function leave(e) {
+        window.removeEventListener('mousemove', this.move);
+        window.removeEventListener('touchmove', this.move);
+        window.removeEventListener('mouseup', this.leave);
+        window.removeEventListener('touchend', this.leave);
+        this.start();
+      },
+      waiting: function waiting() {
+        this.watting = true;
+      },
+      buffered: function buffered() {
+        var _this2 = this;
+
+        clearInterval(this.setting);
+        var buffer = this.$refs.video.buffered;
+        if (buffer.length >= 1) {
+          this.setting = setInterval(function () {
+            buffer = _this2.$refs.video.buffered;
+            if (buffer.end(buffer.length - 1) < _this2.allTime) {
+              _this2.loadLength = buffer.end(buffer.length - 1) / _this2.allTime;
+            } else {
+              _this2.loadLength = 1;
+              clearInterval(_this2.setting);
+              _this2.buffer = true;
+            }
+          }, 1000);
+        }
+      },
+      keyboard: function keyboard(e) {
+        switch (e.code) {
+          case 'Escape':
+            if (this.midScreen) {
+              this.midScreen = false;
+              this.maxScreen = false;
+              clearInterval(this.setMenu);
+              this.$refs.xTitle.style.transform = 'translate3d(0, 0, 0)';
+              this.$refs.xControl.style.transform = 'translate3d(0, 0, 0)';
+            }
+            break;
+          case 'F11':
+            if (this.maxScreen) {
+              this.maxScreen = false;
+              clearInterval(this.setMenu);
+              this.$refs.xTitle.style.transform = 'translate3d(0, 0, 0)';
+              this.$refs.xControl.style.transform = 'translate3d(0, 0, 0)';
+            }
+            break;
+          case 'Space':
+            this.playVideo();
+            break;
+          default:
+            console.log(e.code);
+            break;
+        }
+      },
+      changeBarrage: function changeBarrage() {
+        if (this.barrage) {
+          this.barrage = false;
+        } else {
+          this.barrage = true;
+        }
+      }
+    },
+    mounted: function mounted() {
+      var that = this;
+
+      if (this.cache) {
+        this.buffered();
+      }
+
+      window.addEventListener('keyup', this.keyboard);
+
+      document.addEventListener('webkitfullscreenchange', function (event) {
+        if (!(document.webkitFullscreenElement === that.$refs.xVideo)) {
+          that.maxScreen = false;
+        }
+      });
+    },
+    destroyed: function destroyed() {
+      this.pause();
+      clearInterval(this.setting);
     }
   };
 })();
@@ -7561,10 +7838,19 @@ if (__vue__options__.functional) {
   console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.");
 }
 __vue__options__.render = function render() {
-  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "xvideo" }, [_c('video', { attrs: { "poster": _vm.poster, "webkit-playsinline": "", "playsinline": "", "crossorigin": "anonymous", "preload": "preload", "src": _vm.src } })]);
+  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { ref: "xVideo", staticClass: "x-video", class: { 'mid-video': _vm.midScreen, 'max-video mid-video': _vm.maxScreen }, on: { "mousemove": _vm.toogleMenu } }, [_c('div', { ref: "xTitle", staticClass: "x-title" }, [_c('p', [_vm._v(_vm._s(_vm.name))])]), _vm._v(" "), _c('div', { staticClass: "t-video", on: { "dbclick": _vm.toMax } }, [_c('video', { ref: "video", attrs: { "src": _vm.src, "preload": _vm.cache === 'true' ? 'auto' : 'metadata', "poster": _vm.img }, on: { "loadedmetadata": _vm.loadedmetadata, "canplay": _vm.canplay, "seeked": _vm.seeked, "waiting": _vm.waiting } }), _vm._v(" "), _c('i', { directives: [{ name: "show", rawName: "v-show", value: !_vm.play, expression: "!play" }], staticClass: "iconfont max-pause fade-in", class: { 'icon-v-pause': _vm.play, 'icon-v-play': !_vm.play }, on: { "click": _vm.playVideo } }), _vm._v(" "), _c('div', { staticClass: "danmu", on: { "click": _vm.playVideo } }), _vm._v(" "), _c('div', { directives: [{ name: "show", rawName: "v-show", value: _vm.watting, expression: "watting" }], staticClass: "x-loading" }, [_c('i', { staticClass: "iconfont icon-v-loading" }), _vm._v(" "), _c('p', [_vm._v("加载中..")])])]), _vm._v(" "), _c('div', { ref: "xControl", staticClass: "c-video" }, [_c('div', { staticClass: "play c-item", attrs: { "data-msg": _vm.playMsg } }, [_c('i', { staticClass: "iconfont", class: { 'icon-v-pause': _vm.play, 'icon-v-play': !_vm.play }, on: { "click": _vm.playVideo } })]), _vm._v(" "), _c('div', { ref: "bar", staticClass: "line", on: { "mousemove": function mousemove($event) {
+        _vm.goTime($event);
+      }, "mouseleave": _vm.leaveTime, "click": function click($event) {
+        _vm.jump();
+      } } }, [_c('span', { directives: [{ name: "show", rawName: "v-show", value: _vm.showTime, expression: "showTime" }], staticClass: "go-time", style: { 'left': _vm.goNowTime / _vm.allTime * 100 + '%' } }, [_vm._v(_vm._s(this.two(this.goNowTime)))]), _vm._v(" "), _c('span', { staticClass: "line-to line-bg" }), _vm._v(" "), _c('span', { staticClass: "line-to line-load", style: { 'width': _vm.loadLength / 1 * 100 + '%' } }), _vm._v(" "), _c('span', { ref: "lineIn", staticClass: "line-to line-now", style: { 'width': _vm.nowTime / _vm.allTime * 100 + '%' } }), _vm._v(" "), _c('i', { staticClass: "line-point", style: { 'left': _vm.nowTime / _vm.allTime * 100 + '%' }, on: { "mousedown": function mousedown($event) {
+        _vm.drap($event);
+      }, "touchstart": function touchstart($event) {
+        _vm.drap($event);
+      } } })]), _vm._v(" "), _c('div', { staticClass: "show-time" }, [_c('p', [_vm._v(_vm._s(_vm.reslutTime))])]), _vm._v(" "), _c('div', { staticClass: "right-c" }, [_c('div', { staticClass: "v-volume c-item" }, [_c('i', { staticClass: "iconfont", class: _vm.volumeIcon })]), _vm._v(" "), _c('div', { staticClass: "v-definition c-item" }, [_vm._v("\n        " + _vm._s(_vm.definition) + "\n      ")]), _vm._v(" "), _c('div', { staticClass: "c-dan c-item", attrs: { "data-msg": _vm.danMsg }, on: { "click": _vm.changeBarrage } }, [_c('i', { staticClass: "iconfont", class: { 'icon-open-dan': _vm.barrage, 'icon-close-dan': !_vm.barrage } })]), _vm._v(" "), _c('div', { staticClass: "m-screen c-item", attrs: { "data-msg": _vm.midScreenMsg }, on: { "click": function click($event) {
+        _vm.midScreen = !_vm.midScreen;
+      } } }, [_c('i', { staticClass: "iconfont icon-mid-screen" })]), _vm._v(" "), _c('div', { staticClass: "f-screen c-item", attrs: { "data-msg": _vm.maxScreenMsg }, on: { "click": _vm.toMax } }, [_c('i', { staticClass: "iconfont icon-max-screen" })])])])]);
 };
 __vue__options__.staticRenderFns = [];
-__vue__options__._scopeId = "data-v-12ecd0a6";
 if (module.hot) {
   (function () {
     var hotAPI = require("vue-hot-reload-api");
@@ -7575,14 +7861,14 @@ if (module.hot) {
     if (!module.hot.data) {
       hotAPI.createRecord("data-v-12ecd0a6", __vue__options__);
     } else {
-      hotAPI.reload("data-v-12ecd0a6", __vue__options__);
+      hotAPI.rerender("data-v-12ecd0a6", __vue__options__);
     }
   })();
 }
-},{"vueify/lib/insert-css":11,"vue-hot-reload-api":5,"vue":4}],8:[function(require,module,exports) {
+},{"vueify/lib/insert-css":8,"vue-hot-reload-api":7,"vue":4}],5:[function(require,module,exports) {
 "use strict";
 
-;(function () {
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("@import \"//at.alicdn.com/t/font_224096_t3es4e3cae89f6r.css\";");(function () {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -7618,7 +7904,7 @@ if (__vue__options__.functional) {
   console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.");
 }
 __vue__options__.render = function render() {
-  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "xplayer" }, [_c('xvideo', { attrs: { "src": _vm.src } })], 1);
+  var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "x-player" }, [_c('xvideo', { attrs: { "src": _vm.src } })], 1);
 };
 __vue__options__.staticRenderFns = [];
 __vue__options__._scopeId = "data-v-2aa81846";
@@ -7628,20 +7914,21 @@ if (module.hot) {
     hotAPI.install(require("vue"), true);
     if (!hotAPI.compatible) return;
     module.hot.accept();
+    module.hot.dispose(__vueify_style_dispose__);
     if (!module.hot.data) {
       hotAPI.createRecord("data-v-2aa81846", __vue__options__);
     } else {
-      hotAPI.rerender("data-v-2aa81846", __vue__options__);
+      hotAPI.reload("data-v-2aa81846", __vue__options__);
     }
   })();
 }
-},{"./xvideo":9,"vue-hot-reload-api":5,"vue":4}],7:[function(require,module,exports) {
+},{"vueify/lib/insert-css":8,"./xvideo":6,"vue-hot-reload-api":7,"vue":4}],3:[function(require,module,exports) {
 "use strict";
 
 var xplayer = require('./xplayer');
 
 module.exports = xplayer;
-},{"./xplayer":8}],3:[function(require,module,exports) {
+},{"./xplayer":5}],2:[function(require,module,exports) {
 "use strict";
 
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 29, stdin */\n* {\n  margin: 0;\n  padding: 0; }\n\n/* line 34, stdin */\n.player {\n  display: flex;\n  justify-content: center;\n  max-width: 100%; }");(function () {
@@ -7697,7 +7984,7 @@ if (module.hot) {
     }
   })();
 }
-},{"vueify/lib/insert-css":11,"./xplayer":7,"vue-hot-reload-api":5,"vue":4}],2:[function(require,module,exports) {
+},{"vueify/lib/insert-css":8,"./xplayer":3,"vue-hot-reload-api":7,"vue":4}],1:[function(require,module,exports) {
 "use strict";
 
 var _vue = require("vue");
@@ -7716,7 +8003,7 @@ new _vue2.default({
     return h(_App2.default);
   }
 });
-},{"vue":4,"./App.vue":3}],0:[function(require,module,exports) {
+},{"vue":4,"./App.vue":2}],0:[function(require,module,exports) {
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
 function Module(config) {
@@ -7735,7 +8022,7 @@ function Module(config) {
 module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
-  var ws = new WebSocket('ws://localhost:9121/');
+  var ws = new WebSocket('ws://localhost:52453/');
   ws.onmessage = function(event) {
     var data = JSON.parse(event.data);
 
@@ -7838,4 +8125,4 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id)
   });
 }
-},{}]},{},[0,2])
+},{}]},{},[0,1])
